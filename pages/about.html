@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../assets/css/style.css">
     <script src="../assets/js/script.js" defer></script>
 </head>
-<body>
+<body class="page-about">
     <div id="scroll-progress"></div>
     <!-- Header -->
     <header class="header">
@@ -22,7 +22,6 @@
             </a>
             <nav class="nav">
                 <a href="about.html" class="nav-link">Sobre Mim</a>
-                <a href="skills.html" class="nav-link">Habilidades</a>
                 <a href="contact.html" class="nav-link">Contato</a>
             </nav>
             <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
@@ -34,7 +33,7 @@
     <!-- Hero Section -->
     <section id="about" class="hero">
         <div class="hero-content">
-            <p class="hero-greeting">Conheça um pouco sobre</p>
+            <p class="hero-greeting" data-phrases='["Conheça um pouco sobre", "Minha trajetória & missão", "Habilidades & Experiência"]'>Conheça um pouco sobre</p>
             <h1 class="hero-title">Minha <span class="accent-text">Trajetória</span></h1>
             <p class="hero-subtitle">Apaixonado por tecnologia, design e criação de soluções inovadoras</p>
         </div>
@@ -58,7 +57,7 @@
             </div>
 
             <div class="about-section" data-reveal data-delay="2">
-                <h2 class="section-title">Minha Missão</h2>
+                <h2 class="section-title">Minha Missão / O Que Me Move</h2>
                 <p class="about-text">
                     Transformar ideias em realidade através da tecnologia, criando experiências memoráveis e soluções que 
                     agregam valor. Acredito que bom design é invisível - é aquele que funciona perfeitamente e faz os usuários 
@@ -81,12 +80,55 @@
             </div>
 
             <div class="about-section" data-reveal data-delay="4">
-                <h2 class="section-title">O Que Me Move</h2>
-                <p class="about-text">
-                    Aprender constantemente, encarar novos desafios e colaborar com pessoas incríveis. A cada projeto, 
-                    busco melhorar meus conhecimentos e contribuir para a comunidade tech. Quando não estou programando, 
-                    você me encontra explorando novas tecnologias, lendo sobre design ou curtindo a vida ao lado de amigos.
-                </p>
+                <h2 class="section-title">Habilidades & Expertise</h2>
+
+                <div class="skill-category">
+                    <h3>🎨 Frontend Development</h3>
+                    <div class="skills-list">
+                        <div class="skill-badge">HTML</div>
+                        <div class="skill-badge">CSS</div>
+                        <div class="skill-badge">JavaScript</div>
+                        <div class="skill-badge">React</div>
+                        <div class="skill-badge">Vue.js</div>
+                        <div class="skill-badge">Responsive Design</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>⚙️ Backend Development</h3>
+                    <div class="skills-list">
+                        <div class="skill-badge">Node.js</div>
+                        <div class="skill-badge">Python</div>
+                        <div class="skill-badge">SQL</div>
+                        <div class="skill-badge">MongoDB</div>
+                        <div class="skill-badge">API Rest</div>
+                        <div class="skill-badge">Express.js</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🎭 Design & UX</h3>
+                    <div class="skills-list">
+                        <div class="skill-badge">UI Design</div>
+                        <div class="skill-badge">UX Design</div>
+                        <div class="skill-badge">Figma</div>
+                        <div class="skill-badge">Wireframing</div>
+                        <div class="skill-badge">Prototipagem</div>
+                        <div class="skill-badge">Design System</div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>🛠️ Ferramentas & Outras</h3>
+                    <div class="skills-list">
+                        <div class="skill-badge">Git</div>
+                        <div class="skill-badge">GitHub</div>
+                        <div class="skill-badge">VS Code</div>
+                        <div class="skill-badge">Docker</div>
+                        <div class="skill-badge">Firebase</div>
+                        <div class="skill-badge">Agile</div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -111,6 +153,6 @@
     </footer>
 
     <div class="nav-overlay"></div>
-    <button id="back-to-top" aria-label="Voltar ao topo">↑</button>
+    <button id="back-to-top" aria-label="Voltar ao topo"><span>↑</span></button>
 </body>
 </html>

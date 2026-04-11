@@ -59,28 +59,6 @@
     els.forEach((el) => observer.observe(el));
 })();
 
-// ========================
-// Progress Bar Fill
-// ========================
-(function () {
-    const fills = document.querySelectorAll('.progress-fill[data-width]');
-    if (!fills.length) return;
-
-    const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.style.width = entry.target.dataset.width + '%';
-                    observer.unobserve(entry.target);
-                }
-            });
-        },
-        { threshold: 0.3 }
-    );
-
-    fills.forEach((el) => observer.observe(el));
-})();
-
 /* ======================== */
 /* Scroll-driven UI         */
 /* ======================== */
@@ -119,6 +97,10 @@
             link.classList.add('nav-link-active');
         }
     });
+    if (page === 'index.html' || page === '') {
+        const logoText = document.querySelector('.logo-text');
+        if (logoText) logoText.classList.add('logo-text-active');
+    }
 })();
 
 /* ======================== */
@@ -128,11 +110,9 @@
     const el = document.querySelector('.hero-greeting');
     if (!el) return;
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const phrases = [
-        el.textContent.trim(),
-        'Desenvolvedor & Criador',
-        'Bem-vindo ao meu espaço',
-    ];
+    const phrases = el.dataset.phrases
+        ? JSON.parse(el.dataset.phrases)
+        : [el.textContent.trim(), 'Desenvolvedor & Criador', 'Bem-vindo ao meu espaço'];
     let idx = 0;
     let charIdx = 0;
     let deleting = false;
