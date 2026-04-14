@@ -266,6 +266,8 @@ body::before {
     text-align: center;
     z-index: 10;
     max-width: 800px;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .hero-greeting {
@@ -467,6 +469,8 @@ body::before {
     color: var(--text-light);
     font-size: clamp(1.5rem, 3vw, 2.2rem);
     margin-bottom: var(--spacing-sm);
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 .section-subtitle {
