@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Portfólio — Projeto 1</title>
-    <meta name="description" content="Blog de Desenvolvimento — artigos, tendências e análises sobre tecnologia e inovação digital.">
+    <title>Portfolio — RailDelayTracker</title>
+    <meta name="description" content="RailDelayTracker — real-time DART delay monitoring dashboard built with Java, Spring Boot, and PostgreSQL.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -20,11 +20,11 @@
                 <span class="logo-text">Pablo Carvalho Projects</span>
             </a>
             <nav class="nav">
-                <a href="../about.html" class="nav-link">Sobre Mim</a>
+                <a href="../about.html" class="nav-link">About Me</a>
 
-                <a href="../contact.html" class="nav-link">Contato</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
             </nav>
-            <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -32,9 +32,12 @@
 
     <section class="hero">
         <div class="hero-content">
-            <p class="hero-greeting">Projeto 1 — Conteúdo</p>
-            <h1 class="hero-title">Blog de <span class="accent-text">Desenvolvimento</span></h1>
-            <p class="hero-subtitle">Artigos, tendências e análises sobre desenvolvimento, design e inovação digital.</p>
+            <p class="hero-greeting">Project 1 — Full Stack</p>
+            <h1 class="hero-title">RailDelay<span class="accent-text">Tracker</span></h1>
+            <p class="hero-subtitle">Real-time DART delay monitoring dashboard for Dublin's commuter rail network, powered by the Irish Rail public API.</p>
+            <div class="hero-actions">
+                <a href="https://www.ierailmetrics.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visit ierailmetrics.com <span class="card-link-icon">→</span></a>
+            </div>
         </div>
         <div class="hero-bg">
             <div class="blob blob-1"></div>
@@ -46,96 +49,101 @@
     <section class="about-content">
         <div class="project-detail">
             <div class="project-meta" data-reveal>
-                <span class="project-tag-label">Conteúdo</span>
-                <span class="project-tag-label">Blog</span>
-                <span class="project-tag-label">Escrita Técnica</span>
+                <span class="project-tag-label">Java</span>
+                <span class="project-tag-label">Spring Boot</span>
+                <span class="project-tag-label">PostgreSQL</span>
+                <span class="project-tag-label">Real-time</span>
             </div>
 
             <div class="project-description-block" data-reveal>
-                <h2>Sobre o Projeto</h2>
+                <h2>About the Project</h2>
                 <p>
-                    O Blog de Desenvolvimento nasceu da necessidade de compartilhar conhecimento de forma acessível e direta.
-                    É uma plataforma dedicada a artigos técnicos, tutoriais aprofundados e análises sobre as principais tendências
-                    do ecossistema de tecnologia. O conteúdo é voltado tanto para iniciantes que estão começando sua jornada quanto
-                    para desenvolvedores experientes que buscam se atualizar.
+                    RailDelayTracker is a web dashboard for monitoring delays on the <strong>DART</strong> network
+                    (Dublin Area Rapid Transit), the commuter rail line connecting the north and south coast of Dublin,
+                    Ireland. The application collects real-time data from the Irish Rail public API, stores a history
+                    of snapshots in PostgreSQL, and provides two main views: a live departure board per station and an
+                    analytics dashboard with accumulated delay statistics.
                 </p>
                 <br>
                 <p>
-                    Cada artigo é cuidadosamente estruturado com exemplos práticos, trechos de código comentados e referências
-                    para aprofundamento. O sistema de tags e categorias facilita a navegação, e o suporte a Markdown permite
-                    publicações ágeis com formatação profissional.
+                    Data is collected automatically every <strong>30 seconds</strong> during DART operating hours
+                    (06:00–00:30) using Spring's <code>@Scheduled</code>. Each snapshot of a train at a station is
+                    persisted to the database to build the analytics history. Filters discard bus services and intercity
+                    routes, keeping only genuine DART trains in the dataset. Live updates are streamed to the browser
+                    via SSE (Server-Sent Events) without any page reload.
                 </p>
             </div>
 
             <div class="tech-section" data-reveal>
-                <h2>Stack Tecnológica</h2>
+                <h2>Tech Stack</h2>
+
+                <div class="tech-group">
+                    <h3>Backend</h3>
+                    <div class="tech-badges">
+                        <div class="skill-badge">Java 21</div>
+                        <div class="skill-badge">Spring Boot 3.2</div>
+                        <div class="skill-badge">Spring Web</div>
+                        <div class="skill-badge">Spring Data JPA</div>
+                        <div class="skill-badge">Jackson XML</div>
+                    </div>
+                </div>
+
+                <div class="tech-group">
+                    <h3>Database & Infrastructure</h3>
+                    <div class="tech-badges">
+                        <div class="skill-badge">PostgreSQL</div>
+                        <div class="skill-badge">Maven</div>
+                        <div class="skill-badge">SSE</div>
+                        <div class="skill-badge">REST API</div>
+                    </div>
+                </div>
 
                 <div class="tech-group">
                     <h3>Frontend</h3>
                     <div class="tech-badges">
-                        <div class="skill-badge">HTML5</div>
-                        <div class="skill-badge">CSS3</div>
+                        <div class="skill-badge">Thymeleaf</div>
+                        <div class="skill-badge">Bootstrap 5</div>
+                        <div class="skill-badge">Chart.js 4</div>
                         <div class="skill-badge">JavaScript</div>
-                        <div class="skill-badge">Responsive Design</div>
-                    </div>
-                </div>
-
-                <div class="tech-group">
-                    <h3>Backend & Infraestrutura</h3>
-                    <div class="tech-badges">
-                        <div class="skill-badge">Node.js</div>
-                        <div class="skill-badge">Express.js</div>
-                        <div class="skill-badge">GitHub Pages</div>
-                        <div class="skill-badge">RSS Feed</div>
-                    </div>
-                </div>
-
-                <div class="tech-group">
-                    <h3>Conteúdo & Ferramentas</h3>
-                    <div class="tech-badges">
-                        <div class="skill-badge">Markdown</div>
-                        <div class="skill-badge">Prism.js</div>
-                        <div class="skill-badge">SEO On-Page</div>
-                        <div class="skill-badge">Google Analytics</div>
                     </div>
                 </div>
             </div>
 
             <div class="tech-section" data-reveal>
-                <h2>Tecnologias em Destaque</h2>
+                <h2>Featured Technologies</h2>
                 <div class="tech-highlight-grid">
                     <div class="tech-highlight-card">
-                        <span class="tech-icon">📝</span>
-                        <h4>Markdown</h4>
-                        <p>Toda a escrita em Markdown puro, convertido em HTML estático para máxima performance.</p>
+                        <span class="tech-icon">🚆</span>
+                        <h4>Irish Rail API</h4>
+                        <p>XML responses parsed with Jackson XML, pulling live departure data for all DART stations every 30 seconds.</p>
                     </div>
                     <div class="tech-highlight-card">
                         <span class="tech-icon">⚡</span>
-                        <h4>Node.js</h4>
-                        <p>Scripts de build que geram páginas estáticas a partir dos arquivos .md do repositório.</p>
+                        <h4>SSE Live Updates</h4>
+                        <p>Server-Sent Events push real-time train updates to the browser without polling or page refreshes.</p>
                     </div>
                     <div class="tech-highlight-card">
-                        <span class="tech-icon">🎨</span>
-                        <h4>Prism.js</h4>
-                        <p>Syntax highlighting para blocos de código em mais de 30 linguagens diferentes.</p>
+                        <span class="tech-icon">🗄️</span>
+                        <h4>PostgreSQL</h4>
+                        <p>Trip snapshots and delay records persisted with a 90-day retention policy, powering the analytics dashboard.</p>
                     </div>
                     <div class="tech-highlight-card">
-                        <span class="tech-icon">🔍</span>
-                        <h4>SEO On-Page</h4>
-                        <p>Otimização completa de meta tags, Open Graph, sitemap e structured data.</p>
+                        <span class="tech-icon">📊</span>
+                        <h4>Chart.js</h4>
+                        <p>Interactive delay analytics charts — network-wide or filtered by station — rendered from Spring REST endpoints.</p>
                     </div>
                 </div>
             </div>
 
             <div class="project-link-section" data-reveal>
-                <p>Pronto para ver o projeto em ação?</p>
-                <a href="#" class="btn btn-primary">Acessar Projeto <span class="card-link-icon">→</span></a>
+                <p>Ready to see the project in action?</p>
+                <a href="https://www.ierailmetrics.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Visit ierailmetrics.com <span class="card-link-icon">→</span></a>
             </div>
         </div>
     </section>
 
     <section class="back-section">
-        <a href="../../index.html" class="btn btn-secondary">← Voltar aos Projetos</a>
+        <a href="../../index.html" class="btn btn-secondary">← Back to Projects</a>
     </section>
 
     <footer class="footer">
@@ -146,12 +154,12 @@
                 <a href="mailto:seu.email@example.com" class="social-icon email" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
             </div>
             <div class="footer-bottom">
-                <p class="footer-text">&copy; 2026 Pablo Carvalho. Todos os direitos reservados.</p>
+                <p class="footer-text">&copy; 2026 Pablo Carvalho. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <div class="nav-overlay"></div>
-    <button id="back-to-top" aria-label="Voltar ao topo"><span>↑</span></button>
+    <button id="back-to-top" aria-label="Back to top"><span>↑</span></button>
 </body>
 </html>

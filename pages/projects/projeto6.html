@@ -1,10 +1,10 @@
 ﻿<!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Portfólio — Projeto 6</title>
-    <meta name="description" content="Hub de Contato Inteligente — formulário de contato com validação, backend e proteção anti-spam.">
+    <title>Portfolio — Project 6</title>
+    <meta name="description" content="Smart Contact Hub — contact form with validation, backend, and anti-spam protection.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -20,11 +20,11 @@
                 <span class="logo-text">Pablo Carvalho Projects</span>
             </a>
             <nav class="nav">
-                <a href="../about.html" class="nav-link">Sobre Mim</a>
+                <a href="../about.html" class="nav-link">About Me</a>
 
-                <a href="../contact.html" class="nav-link">Contato</a>
+                <a href="../contact.html" class="nav-link">Contact</a>
             </nav>
-            <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+            <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -32,9 +32,9 @@
 
     <section class="hero">
         <div class="hero-content">
-            <p class="hero-greeting">Projeto 6 — Contato</p>
-            <h1 class="hero-title">Hub de <span class="accent-text">Contato</span></h1>
-            <p class="hero-subtitle">Se você tem uma ideia, projeto ou parceria em mente, será um prazer falar com você.</p>
+            <p class="hero-greeting">Project 6 — Contact</p>
+            <h1 class="hero-title">Contact <span class="accent-text">Hub</span></h1>
+            <p class="hero-subtitle">If you have an idea, project, or partnership in mind, it would be a pleasure to talk with you.</p>
         </div>
         <div class="hero-bg">
             <div class="blob blob-1"></div>
@@ -46,28 +46,28 @@
     <section class="about-content">
         <div class="project-detail">
             <div class="project-meta" data-reveal>
-                <span class="project-tag-label">Contato</span>
+                <span class="project-tag-label">Contact</span>
                 <span class="project-tag-label">Full Stack</span>
                 <span class="project-tag-label">API</span>
             </div>
 
             <div class="project-description-block" data-reveal>
-                <h2>Sobre o Projeto</h2>
+                <h2>About the Project</h2>
                 <p>
-                    O Hub de Contato Inteligente é uma solução full stack para formulários de contato com validação
-                    robusta no frontend e no backend. O sistema processa submissões de forma assíncrona, envia e-mails
-                    com templates HTML responsivos via Nodemailer e armazena um histórico das mensagens recebidas.
+                    The Smart Contact Hub is a full stack solution for contact forms with robust validation on both the
+                    frontend and backend. The system processes submissions asynchronously, sends emails with responsive
+                    HTML templates via Nodemailer, and stores a history of received messages.
                 </p>
                 <br>
                 <p>
-                    A proteção contra spam é feita em duas camadas: reCAPTCHA v3 no frontend (sem fricção para o usuário)
-                    e rate limiting via Express no backend. Todos os dados são sanitizados antes do processamento para
-                    prevenir injeção de código. O endpoint aceita requisições CORS apenas de origens autorizadas.
+                    Spam protection is handled in two layers: reCAPTCHA v3 on the frontend (frictionless for the user)
+                    and rate limiting via Express on the backend. All data is sanitized before processing to prevent code
+                    injection. The endpoint accepts CORS requests only from authorized origins.
                 </p>
             </div>
 
             <div class="tech-section" data-reveal>
-                <h2>Stack Tecnológica</h2>
+                <h2>Tech Stack</h2>
 
                 <div class="tech-group">
                     <h3>Frontend</h3>
@@ -91,11 +91,11 @@
                 </div>
 
                 <div class="tech-group">
-                    <h3>Segurança & Infra</h3>
+                    <h3>Security & Infra</h3>
                     <div class="tech-badges">
                         <div class="skill-badge">Rate Limiting</div>
                         <div class="skill-badge">CORS</div>
-                        <div class="skill-badge">Sanitização de Input</div>
+                        <div class="skill-badge">Input Sanitization</div>
                         <div class="skill-badge">dotenv</div>
                         <div class="skill-badge">Railway</div>
                     </div>
@@ -103,40 +103,40 @@
             </div>
 
             <div class="tech-section" data-reveal>
-                <h2>Tecnologias em Destaque</h2>
+                <h2>Featured Technologies</h2>
                 <div class="tech-highlight-grid">
                     <div class="tech-highlight-card">
                         <span class="tech-icon">📧</span>
                         <h4>Nodemailer</h4>
-                        <p>Envio de e-mails com templates HTML responsivos e confirmação automática para o remetente.</p>
+                        <p>Email sending with responsive HTML templates and automatic confirmation for the sender.</p>
                     </div>
                     <div class="tech-highlight-card">
                         <span class="tech-icon">🛡️</span>
                         <h4>reCAPTCHA v3</h4>
-                        <p>Proteção contra bots sem fricção para o usuário — avaliação de risco invisível no background.</p>
+                        <p>Bot protection without friction for the user — invisible risk assessment in the background.</p>
                     </div>
                     <div class="tech-highlight-card">
                         <span class="tech-icon">⚙️</span>
                         <h4>Express.js</h4>
-                        <p>API REST com middleware de rate limiting, validação de origem e sanitização de dados.</p>
+                        <p>REST API with rate limiting middleware, origin validation, and data sanitization.</p>
                     </div>
                     <div class="tech-highlight-card">
                         <span class="tech-icon">🚀</span>
                         <h4>Railway</h4>
-                        <p>Deploy automático via Git com variáveis de ambiente seguras e domínio HTTPS incluído.</p>
+                        <p>Automatic deployment via Git with secure environment variables and HTTPS domain included.</p>
                     </div>
                 </div>
             </div>
 
             <div class="project-link-section" data-reveal>
-                <p>Pronto para ver o projeto em ação?</p>
-                <a href="../contact.html" class="btn btn-primary">Falar Comigo <span class="card-link-icon">→</span></a>
+                <p>Ready to see the project in action?</p>
+                <a href="../contact.html" class="btn btn-primary">Talk to Me <span class="card-link-icon">→</span></a>
             </div>
         </div>
     </section>
 
     <section class="back-section">
-        <a href="../../index.html" class="btn btn-secondary">← Voltar aos Projetos</a>
+        <a href="../../index.html" class="btn btn-secondary">← Back to Projects</a>
     </section>
 
     <footer class="footer">
@@ -147,12 +147,12 @@
                 <a href="mailto:seu.email@example.com" class="social-icon email" aria-label="Email"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
             </div>
             <div class="footer-bottom">
-                <p class="footer-text">&copy; 2026 Pablo Carvalho. Todos os direitos reservados.</p>
+                <p class="footer-text">&copy; 2026 Pablo Carvalho. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <div class="nav-overlay"></div>
-    <button id="back-to-top" aria-label="Voltar ao topo"><span>↑</span></button>
+    <button id="back-to-top" aria-label="Back to top"><span>↑</span></button>
 </body>
 </html>

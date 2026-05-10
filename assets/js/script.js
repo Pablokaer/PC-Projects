@@ -112,7 +112,7 @@
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     const phrases = el.dataset.phrases
         ? JSON.parse(el.dataset.phrases)
-        : [el.textContent.trim(), 'Desenvolvedor & Criador', 'Bem-vindo ao meu espaço'];
+        : [el.textContent.trim(), 'Developer & Creator', 'Welcome to my space'];
     let idx = 0;
     let charIdx = 0;
     let deleting = false;
