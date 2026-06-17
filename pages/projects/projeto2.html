@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Portfolio — Project 2</title>
-    <meta name="description" content="Creative Gallery — visual compositions, creative direction, and a distinctive aesthetic identity.">
+    <title>Portfolio — Resume Tailor</title>
+    <meta name="description" content="Resume Tailor — AI-powered resume customization SaaS built with Java, Spring Boot, PostgreSQL, OpenAI, and Stripe.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -32,9 +32,9 @@
 
     <section class="hero">
         <div class="hero-content">
-            <p class="hero-greeting">Project 2 — Visual</p>
-            <h1 class="hero-title">Creative <span class="accent-text">Gallery</span></h1>
-            <p class="hero-subtitle">Visual compositions, creative direction, and a distinctive aesthetic identity.</p>
+            <p class="hero-greeting">Project 2 — Full Stack SaaS</p>
+            <h1 class="hero-title">Resume <span class="accent-text">Tailor</span></h1>
+            <p class="hero-subtitle">AI-powered web application for tailoring resumes to specific job descriptions, generating ATS-optimized PDF and DOCX files.</p>
         </div>
         <div class="hero-bg">
             <div class="blob blob-1"></div>
@@ -46,23 +46,26 @@
     <section class="about-content">
         <div class="project-detail">
             <div class="project-meta" data-reveal>
-                <span class="project-tag-label">Visual</span>
-                <span class="project-tag-label">Gallery</span>
-                <span class="project-tag-label">Design</span>
+                <span class="project-tag-label">Java</span>
+                <span class="project-tag-label">Spring Boot</span>
+                <span class="project-tag-label">OpenAI</span>
+                <span class="project-tag-label">Stripe</span>
             </div>
 
             <div class="project-description-block" data-reveal>
                 <h2>About the Project</h2>
                 <p>
-                    The Creative Gallery is an interactive visual portfolio featuring photographic compositions, digital
-                    illustrations, and art direction work. The project was built with a focus on performance and an
-                    immersive experience, leveraging modern layout techniques to display images with maximum visual impact.
+                    Resume Tailor is a SaaS-style web application that helps users customize a resume for each job
+                    application. The user uploads a resume in <strong>PDF</strong> or <strong>DOCX</strong> format,
+                    pastes a target job description, and receives a rewritten version optimized for ATS systems,
+                    including job-specific keywords, explanations of the changes, and final downloads in PDF and DOCX.
                 </p>
                 <br>
                 <p>
-                    The gallery uses lazy loading to ensure images are loaded only when needed, and a lightbox viewer
-                    allows navigation between pieces without leaving the page. The responsive grid automatically adapts
-                    to any screen size, maintaining the original proportions of each piece.
+                    The application extracts text from the original document, validates the job description, deducts
+                    one credit, and sends the resume context to the OpenAI API for rewriting. If processing fails, the
+                    credit is automatically refunded. Generated files are saved temporarily, while the tailored resume
+                    result is stored in the user's history for future access.
                 </p>
             </div>
 
@@ -70,65 +73,67 @@
                 <h2>Tech Stack</h2>
 
                 <div class="tech-group">
-                    <h3>Layout & Interface</h3>
+                    <h3>Backend</h3>
                     <div class="tech-badges">
-                        <div class="skill-badge">HTML5</div>
-                        <div class="skill-badge">CSS Grid</div>
-                        <div class="skill-badge">CSS Masonry</div>
-                        <div class="skill-badge">JavaScript</div>
+                        <div class="skill-badge">Java 21</div>
+                        <div class="skill-badge">Spring Boot 3.2.5</div>
+                        <div class="skill-badge">Spring Web</div>
+                        <div class="skill-badge">Spring Security</div>
+                        <div class="skill-badge">Spring Data JPA</div>
                     </div>
                 </div>
 
                 <div class="tech-group">
-                    <h3>Animation & Interaction</h3>
+                    <h3>AI, Documents & Payments</h3>
                     <div class="tech-badges">
-                        <div class="skill-badge">GSAP</div>
-                        <div class="skill-badge">Intersection Observer</div>
-                        <div class="skill-badge">Lightbox</div>
-                        <div class="skill-badge">CSS Transitions</div>
+                        <div class="skill-badge">OpenAI GPT-4o</div>
+                        <div class="skill-badge">Apache PDFBox</div>
+                        <div class="skill-badge">Apache POI</div>
+                        <div class="skill-badge">iText 8</div>
+                        <div class="skill-badge">Stripe Checkout</div>
                     </div>
                 </div>
 
                 <div class="tech-group">
-                    <h3>Performance & Media</h3>
+                    <h3>Database & Infrastructure</h3>
                     <div class="tech-badges">
-                        <div class="skill-badge">Lazy Loading</div>
-                        <div class="skill-badge">WebP</div>
-                        <div class="skill-badge">Figma</div>
-                        <div class="skill-badge">Image Compression</div>
+                        <div class="skill-badge">PostgreSQL 15</div>
+                        <div class="skill-badge">Flyway</div>
+                        <div class="skill-badge">Thymeleaf</div>
+                        <div class="skill-badge">Maven</div>
+                        <div class="skill-badge">Docker Compose</div>
                     </div>
                 </div>
             </div>
 
             <div class="tech-section" data-reveal>
-                <h2>Featured Technologies</h2>
+                <h2>Core Features</h2>
                 <div class="tech-highlight-grid">
                     <div class="tech-highlight-card">
-                        <span class="tech-icon">🎞️</span>
-                        <h4>GSAP</h4>
-                        <p>Fluid entrance animations with precise timelines and custom easing for each element.</p>
+                        <span class="tech-icon">🤖</span>
+                        <h4>AI Resume Rewriting</h4>
+                        <p>Uses OpenAI GPT-4o to rewrite resumes around a target role, incorporating relevant ATS keywords.</p>
                     </div>
                     <div class="tech-highlight-card">
-                        <span class="tech-icon">🖼️</span>
-                        <h4>CSS Grid</h4>
-                        <p>Responsive masonry layout, without external libraries, using pure CSS grid.</p>
+                        <span class="tech-icon">📄</span>
+                        <h4>PDF and DOCX Flow</h4>
+                        <p>Reads uploaded resumes with PDFBox and POI, then generates final downloadable PDF and DOCX files.</p>
                     </div>
                     <div class="tech-highlight-card">
-                        <span class="tech-icon">⚡</span>
-                        <h4>WebP</h4>
-                        <p>All images optimized in WebP with PNG fallback, reducing size by up to 60%.</p>
+                        <span class="tech-icon">💳</span>
+                        <h4>Credit System</h4>
+                        <p>Each generation consumes one credit, with Stripe Checkout purchases and automatic refunds on failed processing.</p>
                     </div>
                     <div class="tech-highlight-card">
-                        <span class="tech-icon">🔍</span>
-                        <h4>Lightbox</h4>
-                        <p>Fullscreen viewer with keyboard navigation, mobile swipe, and zoom gestures.</p>
+                        <span class="tech-icon">🔐</span>
+                        <h4>Authentication</h4>
+                        <p>Includes email and password login, Google OAuth2, password reset tokens, and protected user history.</p>
                     </div>
                 </div>
             </div>
 
             <div class="project-link-section" data-reveal>
-                <p>Ready to see the project in action?</p>
-                <a href="#" class="btn btn-primary">View Project <span class="card-link-icon">→</span></a>
+                <p>Built as a complete SaaS product with AI generation, payments, email notifications, and Docker-based infrastructure.</p>
             </div>
         </div>
     </section>
