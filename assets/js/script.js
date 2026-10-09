@@ -111,17 +111,13 @@
 
         document.querySelectorAll('[data-project-count]').forEach((el) => { el.textContent = pad(cards.length); });
 
-        // First visible card is the large feature; an odd one out closes the grid as a wide card.
+        // Every card uses the same wide, list-style layout; only the index numbers are refreshed.
         const layout = () => {
-            const visible = cards.filter((c) => !c.hidden);
-            cards.forEach((c) => c.classList.remove('is-wide', 'is-reverse'));
-            visible.forEach((c, i) => {
+            cards.filter((c) => !c.hidden).forEach((c, i) => {
+                c.classList.add('is-wide');
                 const idx = c.querySelector('.project-card__index');
                 if (idx) idx.textContent = pad(i + 1);
             });
-            if (visible[0]) visible[0].classList.add('is-wide');
-            const rest = visible.slice(1);
-            if (rest.length % 2 === 1) rest[rest.length - 1].classList.add('is-wide', 'is-reverse');
         };
         layout();
 
