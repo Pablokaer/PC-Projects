@@ -53,7 +53,7 @@ assets/
   js/config.js                Personal details: links, status label, hero image
   js/script.js                Mobile menu, scroll reveal, project filter, config binding
   img/projects/               Project covers and screenshots (WebP)
-  img/brand/                  Favicon (SVG, PNG), Apple touch icon and social preview image
+  img/brand/                  Favicon (SVG), Apple touch icon and social preview image
 ```
 
 ## Editing content
