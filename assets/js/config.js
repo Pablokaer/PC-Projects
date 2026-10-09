@@ -5,8 +5,8 @@ window.SITE = {
 
     // Social / contact destinations (applied to every [data-link="..."] element).
     github: 'https://github.com/Pablokaer',
-    linkedin: 'https://www.linkedin.com',
-    email: 'seu.email@example.com',
+    linkedin: 'https://www.linkedin.com/in/pablo-carvalh0',
+    email: 'pablo.luan.carvalho@gmail.com',
 
     // Optional personal image for the hero circle (e.g. 'assets/img/portrait.jpg').
     // When empty, an abstract technology composition is shown instead.
