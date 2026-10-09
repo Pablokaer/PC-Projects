@@ -71,7 +71,7 @@ assets/
 
 ## Social preview and icons
 
-The favicon is a white "P" on a blue background. Links pasted in chats show `assets/img/brand/og-preview.png` (1200×630) through the Open Graph and Twitter Card tags in each page's `<head>`. Chat apps cache previews, so test a changed image with a new link or the platform's debugger.
+The favicon is a white "P" on a blue background. Links pasted in chats show `assets/img/brand/social-card.png` (1200×630) through the Open Graph and Twitter Card tags in each page's `<head>`. Chat apps cache previews, so test a changed image with a new link or the platform's debugger.
 
 ## Deployment
 
